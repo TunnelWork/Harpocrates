@@ -1,6 +1,6 @@
 # Harpocrates
 
-Harpocrates was the Greek god of silence and screts. In his name, we present this generic security utility wrapper used for Tunnel.Work projects.
+In the name of the ancient Greek god of silence and secrets, we present Harpocrates, the generic Security Utility Wrapper by Tunnel.Work.
 
 ## Frequent Used Functionalities
 
