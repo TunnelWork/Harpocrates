@@ -2,18 +2,20 @@ package harpocrates
 
 import "crypto/ed25519"
 
-func Ed25519Key(seed []byte) ed25519.PrivateKey {
+func Ed25519Key(seed string) ed25519.PrivateKey {
 	if len(seed) == 0 {
 		return nil
 	}
 
-	for len(seed) < 32 {
-		seed = append(seed, seed...)
+	var byteSeed []byte = []byte(seed)
+
+	for len(byteSeed) < 32 {
+		byteSeed = append(byteSeed, byteSeed...)
 	}
 
-	if len(seed) > 32 {
-		seed = seed[:32]
+	if len(byteSeed) > 32 {
+		byteSeed = byteSeed[:32]
 	}
 
-	return ed25519.NewKeyFromSeed(seed)
+	return ed25519.NewKeyFromSeed(byteSeed)
 }
