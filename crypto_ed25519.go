@@ -18,7 +18,7 @@ var (
 // otherwise, auto-extended by repeating itself
 // May return nil if seed is empty
 func Ed25519Key(seed string) ed25519.PrivateKey {
-	if len(seed) == 0 {
+	if seed == "" {
 		return nil
 	}
 
