@@ -21,7 +21,7 @@ func GetRandomString(n uint, runes []rune) (string, error) {
 	return string(b), nil
 }
 
-func GetRandomNumber(min int, max int) int {
+func GetRandomNumber(min, max int) int {
 	c, err := crand.Int(crand.Reader, big.NewInt(int64(max-min)))
 	if err == nil {
 		return int(c.Int64()) + min
