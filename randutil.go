@@ -26,5 +26,5 @@ func GetRandomNumber(min int, max int) int {
 	if err == nil {
 		return int(c.Int64()) + min
 	}
-	return min + rand.Intn(max-min) // or use math/rand instead
+	return min + rand.Intn(max-min) // skipcq: GSC-G404
 }
