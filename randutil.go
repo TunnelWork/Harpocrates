@@ -28,3 +28,14 @@ func GetRandomNumber(min, max int) int {
 	}
 	return min + rand.Intn(max-min) // skipcq: GSC-G404
 }
+
+// GetRandomHex generates a Hex (as string)
+// with maximum value bound by bytes as max < 2^(bytes*8)
+func GetRandomHex(bytes uint) (string, error) {
+	return GetRandomString(bytes*2, runesHEX)
+}
+
+// GetRandomBase32 generates a Base32 (as string)
+func GetRandomBase32() (string, error) {
+	return GetRandomString(32, runesBASE32)
+}
