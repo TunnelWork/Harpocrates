@@ -6,6 +6,7 @@ var (
 	runesUpperCase []rune = []rune("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 	runesNumber    []rune = []rune("0123456789")
 	runesHEX       []rune = []rune("0123456789ABCEDF")
+	runesBASE32    []rune = []rune("ABCDEFGHIJKLMNOPQRSTUV1234567890")
 	runesSymbol    []rune = []rune(`~!@#$%^&*_+-=[]{};:,.<>?`) // non-escaping and non-ambiguous symbols
 
 	// Combined runes
